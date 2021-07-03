@@ -1,1 +1,2 @@
- console.log("workds");
+joke = document.getElementById("joke")
+joke.innerHTML = "lol";
