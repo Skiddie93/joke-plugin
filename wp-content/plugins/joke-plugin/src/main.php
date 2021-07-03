@@ -25,11 +25,12 @@ class joke_widget extends WP_Widget {
 	 */
 	public function widget( $args, $instance ) {
     //include script file
-    wp_enqueue_script('jk_script', plugins_url().'/joke-plugin/src/js/app.js');
+    wp_enqueue_script('jk_script', plugins_url().'/joke-plugin/src/js/app.js'); //the app.js execution
 		echo $args['before_widget'];
 		if ( ! empty( $instance['title'] ) ) {
 			echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title'];
 		}
+    //div where the content will be randered to
 		echo "<div class='joke' id='joke'></div>";
 		echo $args['after_widget'];
 	}
@@ -42,7 +43,7 @@ class joke_widget extends WP_Widget {
 	 * @param array $instance Previously saved values from database.
 	 */
 	public function form( $instance ) {
-		$title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'Joke of the day', 'jk_domain' );
+		$title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'Joke of the day', 'jk_domain' ); //default tittle
 		?>
 		<p>
 		<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_attr_e( 'Title:', 'jk_domain' ); ?></label>
