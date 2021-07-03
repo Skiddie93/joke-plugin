@@ -6,6 +6,9 @@ Version: 1.1.0
 Author: Domen
 */
 
+// Exit if accessed directly
 if ( ! defined( 'ABSPATH' ) ) {
-     exit; // Exit if accessed directly
+     exit;
  }
+
+ require_once(plugin_dir_path(__FILE__).'includes/joke-plugin-includes.php');
