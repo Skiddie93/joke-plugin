@@ -26,3 +26,17 @@ function handleResponse(response) {
     localStorage.setItem("joke", JSON.stringify(jokeInfo))
   }
 }
+
+//Rendering inside widget div and new joke fetch on a new day
+(async function render() {
+  if (localStorage.getItem("joke") == null) {
+    await jokes()
+  }
+  let jokeInfo = JSON.parse(localStorage.getItem("joke"))
+  joke.innerHTML = jokeInfo["print"]
+
+  if (jokeInfo["jokeday"] != currentDay) {
+    await jokes()
+  }
+
+})()
