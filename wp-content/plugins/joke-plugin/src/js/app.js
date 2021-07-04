@@ -28,7 +28,6 @@ function handleResponse(response) {
       localStorage.setItem("joke", JSON.stringify(jokeInfo))
       break;
     default:
-
   }
 }
 

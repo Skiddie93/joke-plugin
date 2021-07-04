@@ -7,5 +7,5 @@ function joke_plugin_includes(){
  wp_enqueue_style('jk_styles', plugins_url().'/joke-plugin/src/css/style.css');
 }
 
-//Include into document
+//Executes the function
 add_action('wp_enqueue_scripts', 'joke_plugin_includes');

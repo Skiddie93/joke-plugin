@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: Joke plugin
-Description: Displays joke of the day to user
-Version: 1.1.0
-Author: Domen
+Description: Displays joke of the day to user.
+Version: 1.0.0
+Author: Domen Petrovcic
 */
 
 // Exit if accessed directly
@@ -11,8 +11,8 @@ if ( ! defined( 'ABSPATH' ) ) {
      exit;
  }
 
-//Execute include function
+//Calls includes file
  require_once(plugin_dir_path(__FILE__).'includes/joke-plugin-includes.php');
 
-//Executes the main widget function
+//Calls main widget file
  require_once(plugin_dir_path(__FILE__).'src/main.php');

@@ -30,8 +30,7 @@ class joke_widget extends WP_Widget {
 		if ( ! empty( $instance['title'] ) ) {
 			echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title'];
 		}
-    //div where the content will be randered to
-		echo "<div class='joke' id='joke'></div>";
+		echo "<div class='joke' id='joke'></div>"; //div where the content will be randered to
 		echo $args['after_widget'];
 	}
 
